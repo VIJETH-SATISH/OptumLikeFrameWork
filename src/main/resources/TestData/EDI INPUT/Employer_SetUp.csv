@@ -1,0 +1,4 @@
+Scenario_ID,Employer Name,Enrollment Submitter ID,Employer ID,Savings Account,Savings Account_1,Savings Account_2,Billing Group Identifier,PaySite
+Employer_Liberty_Mutual_TestCCP,Liberty Mutual - testccp,TESTCCP1234,15863,HSA: HSA-ER,HSA: HSA-EE,HRA 22: HRA - all 213(d) expenses 22,All Employees(Weekly),
+Employer_Single_Token_On,Single_Token_On,TESTCCP5678,15858,HSA: HSA-ER,HSA: HSA-EE,HRA 22: HRA - all 213(d) expenses 22,All Employees(Weekly),
+Employer_Seperate_Token_On,Seperate_Token_On,TESTCCP56774,15847,HSA: HSA-ER,HSA: HSA-EE,HRA 22: HRA - all 213(d) expenses 22,All Employees(Weekly),
