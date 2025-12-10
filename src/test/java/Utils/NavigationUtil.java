@@ -38,6 +38,7 @@ Because:
 public final class NavigationUtil {
 
 	public static void mouseHoverJsClick(WebElement elementToHover) {
+		if(GenericUtil.isElementDisplayed(elementToHover, 3)) {}
 		if(GenericUtil.isElementDisplayed(elementToHover, 3)) {
 			JavascriptExecutor js = (JavascriptExecutor)ExtentDriverFactory.getInstance();
 
