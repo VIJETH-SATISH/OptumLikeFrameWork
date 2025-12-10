@@ -75,9 +75,7 @@ public final class NavigationUtil {
 		
 		try {
 			List<WebElement> options = (new Select(webElement)).getOptions();
-			
-			
-			
+					
 			for(WebElement option:options) {
 				 if(option.getText().contains(partialText)){
 					 option.click();
