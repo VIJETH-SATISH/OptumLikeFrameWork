@@ -87,7 +87,5 @@ public class ExtentDriverFactory {
 			return true;
 		}
 	}
-	
-	
-	
+		
 }
