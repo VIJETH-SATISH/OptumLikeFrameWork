@@ -1,9 +1,12 @@
 package ExtentFactory;
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import BaseTest.BasePage;
 import Utils.ConfigUtil;
 import Utils.GlobalParameters;
 import cucumber.deps.com.thoughtworks.xstream.InitializationException;
@@ -62,9 +65,13 @@ public class ExtentDriverFactory {
 			}else {
 				System.out.println("Could not read driver instance properly, please verify and re-run!");
 			}
+			
+			BasePage.smallWait.set(new WebDriverWait(getDriver(), Duration.ofSeconds(BasePage.smallWaitTime)));
+			BasePage.mediumWait.set(new WebDriverWait(getDriver(), Duration.ofSeconds(BasePage.mediumWaitTime)));
+			BasePage.longWait.set(new WebDriverWait(getDriver(), Duration.ofSeconds(BasePage.longWaitTime)));
+			return getDriver();
 		}
-		return getDriver();
-		
+			
 	}
 	
 	public static boolean closeDeviceDriver() {

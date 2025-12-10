@@ -3,15 +3,21 @@ package BaseTest;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Locale;
-
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import ExtentFactory.ExtentDriverFactory;
 import Utils.ConfigUtil;
 
 public class BasePage {
+	public static final int smallWaitTime = 10;
+	public static final int mediumWaitTime = 20;
+	public static final int longWaitTime = 30;
+	public static final ThreadLocal<WebDriverWait> smallWait = new ThreadLocal();
+	public static final ThreadLocal<WebDriverWait> mediumWait = new ThreadLocal();
+	public static final ThreadLocal<WebDriverWait> longWait = new ThreadLocal();
 	public WebDriver driver;
 	
 	public BasePage() {

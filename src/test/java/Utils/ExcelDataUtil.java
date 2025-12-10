@@ -195,7 +195,7 @@ public class ExcelDataUtil {
 	synchronized public static void setTheFieldValues(XSSFSheet sh, int row_idx, int col_idx, String value) {
 		/*SINCE THE ROW HAS BEEN ALREADY CREATED WE NEED TO USE GETROW*/
 		Row row = sh.getRow(row_idx);
-		/*SINCE CELL HAS NOT BEEN CREATED YET IN THE ROW, WE USE CREATECELL*/
+		/*SINCE CELL HAS NOT BEEN CREATED YET IN THE ROW at that position or index, WE USE CREATECELL*/
 		row.createCell(col_idx).setCellValue(value);
 	}
 	

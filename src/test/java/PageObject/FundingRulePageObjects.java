@@ -17,7 +17,7 @@ public class FundingRulePageObjects extends PageObjectBase {
 		
 		PageObjectBase.PageLoadWait();
 		System.out.println(accountName);
-		NavigationUtil.selectValueFromDropDown(Funding_Rule_SavingsAccount_DRPDWN, accountName);
+		NavigationUtil.selectFromDropDown(Funding_Rule_SavingsAccount_DRPDWN, accountName);
 		Thread.sleep(4000);
 	}
 }

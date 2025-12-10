@@ -4,6 +4,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.WebElement;
 
 import BaseTest.BasePage;
+import Utils.GenericUtil;
 
 public class HomePagePageObjects extends BasePage{
 
@@ -19,6 +20,7 @@ public class HomePagePageObjects extends BasePage{
 	
 	public void EnterTheCreds() throws Exception {
 		Thread.sleep(2500);
+		GenericUtil.isElementDisplayed(emailGmailId_ele, 20);
 		emailGmailId_ele.sendKeys("vijeth2011");
 		Thread.sleep(2500);
 	}

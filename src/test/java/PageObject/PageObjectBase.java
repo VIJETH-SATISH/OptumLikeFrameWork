@@ -1,5 +1,6 @@
 package PageObject;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WindowType;
 
 import BaseTest.BasePage;
@@ -8,6 +9,12 @@ import Utils.WaitUtil;
 
 public class PageObjectBase extends BasePage{
 	
+	public JavascriptExecutor jse;
+	
+	public PageObjectBase() {
+		super();// constructr is executed and ""
+		jse = (JavascriptExecutor) driver;
+	}
 	
 	public static void PageLoadWait() {
 		WaitUtil.waitForPageLoad(ExtentDriverFactory.getDriver());

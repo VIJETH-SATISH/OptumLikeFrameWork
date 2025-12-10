@@ -1,5 +1,9 @@
 package Utils;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
 public class ReusableMethodsUtil {
 
 	synchronized public static String randomNumberLengthbased(int Length){
@@ -16,4 +20,8 @@ public class ReusableMethodsUtil {
 		String subStr = s.substring(0,Length);
 		return subStr;
 	}
+	
+	public static String captureScreenshot(WebDriver driver) {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+    }
 }
