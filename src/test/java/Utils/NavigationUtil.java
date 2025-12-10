@@ -202,7 +202,10 @@ public final class NavigationUtil {
 		}
 	}
 	
-	public static void setCheckbox() {
+	public static void setCheckbox(WebElement webElement) {
+		if(GenericUtil.isElementDisplayed(webElement,3)) {
+			
+		}
 		
 	}
 	
