@@ -76,9 +76,7 @@ public final class NavigationUtil {
 		
 		try {
 			List<WebElement> options = (new Select(webElement)).getOptions();
-			
-			
-			
+					
 			for(WebElement option:options) {
 				 if(option.getText().contains(partialText)){
 					 option.click();
@@ -205,7 +203,10 @@ public final class NavigationUtil {
 		}
 	}
 	
-	public static void setCheckbox() {
+	public static void setCheckbox(WebElement webElement) {
+		if(GenericUtil.isElementDisplayed(webElement,3)) {
+			
+		}
 		
 	}
 	
