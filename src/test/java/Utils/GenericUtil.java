@@ -45,8 +45,8 @@ public class GenericUtil {
 			
 			if(!(Boolean) staleCounter.get()) {
 				staleCounter.set(true); 
-				ExtentDriverFactory.getInstance().getDriver().navigate().refresh();
-				WaitUtil.waitForPageLoad(ExtentDriverFactory.getInstance().getDriver());
+				ExtentDriverFactory.getDriver().navigate().refresh();
+				WaitUtil.waitForPageLoad(ExtentDriverFactory.getDriver());
 				isElementDisplayed(webElement, seconds);
 			}
 			

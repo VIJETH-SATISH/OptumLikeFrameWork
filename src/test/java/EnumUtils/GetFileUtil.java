@@ -27,6 +27,7 @@ enum FileNameEnum {
 	}
 }
 
+//GetFileUtil.GetFileName("READWRITE_INPUT");
 //enum kelage class define maadu
 
 public class GetFileUtil{
@@ -46,6 +47,10 @@ public class GetFileUtil{
 		
 		return Filename.replace("/", File.separator).replace("\\",File.separator);
 	}
-	
+//🔹 What File.separator does
+//In Java (from Java):
+//File.separator gives the correct separator for the current OS
+//Windows → \
+//Linux/macOS → /
 	
 }

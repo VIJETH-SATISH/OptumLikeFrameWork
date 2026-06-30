@@ -93,7 +93,7 @@ public final class NavigationUtil {
 			 * */
 			
 		} catch (NoSuchElementException e) {
-			log.error("No selected option found for dropdown: {}", webElement, e);
+			 
 			Assert.fail("Cannot locate option with Text : "+ String.valueOf(webElement) + " for webelement: "+ webElement);			
 		}
 		

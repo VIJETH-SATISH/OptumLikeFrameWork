@@ -1,23 +1,24 @@
 package StepDefinitions;
 
-import java.util.HashMap;
-
-import org.openqa.selenium.WebElement;
-
-import Utils.XMLParser;
+import PageObject.InterfaceDashPageObjects;
 import io.cucumber.java.en.And;
 
 public class ValidateBatchHasCompletedWithWhileLoop {
 
+	InterfaceDashPageObjects interfaceDashPageObj;
 	
-	public ValidateBatchHasCompletedWithWhileLoop(){
-		
-		
+	public ValidateBatchHasCompletedWithWhileLoop(){	
+		interfaceDashPageObj = new InterfaceDashPageObjects();
 	}
-	@And("I look whether execution of batch is completed and completion status has appeared for a batch")
-	public void Validate_Batch_Completion() {
-		
-		
+	
+	
+	@And("I look whether execution of batch is completed and completion status has appeared for a batch {string}")
+	public void Validate_Batch_Completion(String sBatch) {
+		try {		
+			interfaceDashPageObj.CheckBatchRunningInQueue(sBatch);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 	
 	

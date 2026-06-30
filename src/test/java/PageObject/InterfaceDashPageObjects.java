@@ -105,7 +105,7 @@ public class InterfaceDashPageObjects extends PageObjectBase{
 	 *  **********/
 	public boolean isBatchStillRunning(String sBatch) {
 		boolean runningStatus = false;
-		int batchCount = batchSize.size();
+		int batchCount = batchSize.size();//total number of rows i,e total number of batches running
 		
 		try {
 			if(batchCount==0) {
@@ -134,9 +134,6 @@ public class InterfaceDashPageObjects extends PageObjectBase{
 			// TODO: handle exception
 			System.out.println("No element found!!");
 		}
-		
-		
-		
 		
 		return runningStatus;
 	}

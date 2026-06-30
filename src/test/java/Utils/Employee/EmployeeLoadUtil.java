@@ -26,8 +26,8 @@ public class EmployeeLoadUtil {
 		for(String Key: FieldValues.keySet()) {
 			String FieldValue =FieldValues.get(Key);
 			if(FieldValue !=null) {
-				if(FieldValue.isEmpty()== false) {
-					if(FieldValue != "") {
+				if(FieldValue.isEmpty()==false) { //!FieldValue.trim().isEmpty()
+					if(FieldValue != "") { // != does reference comparision -> so its mindless 
 						if(FieldValue.substring(0,1).equalsIgnoreCase("#")) {
 							if(FieldValue.contains("Auto_Generated")) {
 								System.out.println(Key);

@@ -127,6 +127,7 @@ public class ExcelDataUtil {
 			Row row = sh.getRow(0);
 			int col_index;
 			int row_idx;
+//			row.getLastCellNum()
 			for(Cell cell:row) {
 				String columnValue =cell.getStringCellValue();
 				columnValuesArr.add(columnValue);
@@ -165,7 +166,7 @@ public class ExcelDataUtil {
 				row_set_Idx = sh.createRow(row_idx+1);
 				row_set_Idx.createCell(0).setCellValue(Scenario_id);
 				
-				//creation of row once is enough IF NOT PRESENT LATER ON the row index would be found based on already 
+				//creation of row once is enough IF NOT PRESENT, LATER ON the row index would be found based on already 
 				//present Scenario ID and same's index would used
 			
 			}else{

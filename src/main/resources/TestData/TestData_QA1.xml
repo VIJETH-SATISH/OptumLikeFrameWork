@@ -7,6 +7,10 @@
 			<USERNAME>VIJETH</USERNAME>
 			<PASSWORD>QWERTY123</PASSWORD>
 		</APPCREDENTIALS>
+		<SUPPORTINGAPPURL>
+			<PARNTERSTATUS>https://portal.qa.connectyourcare.net/partnerStatus.jsp</PARNTERSTATUS>
+			<JBOSS>https://portal.qa.connectyourcare.net/jboss.jsp</JBOSS>
+		</SUPPORTINGAPPURL>
 	</CYC>
 </QA3>
 </Testdata>

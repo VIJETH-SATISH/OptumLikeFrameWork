@@ -67,6 +67,12 @@ public class DataBaseUtil {
 			rs.close();
 			statement.close();
 			connection.close();
+			/* why do we need to close the connection of data base?*/
+			/* database connections are expensive, finite system resources
+			 * If your application repeatedly opens connections without closing them,
+			 * it will quickly hit the database's limit. New users or operations will
+			 * face a SQLException indicating "Too many connections", 
+			 * and your application will stop working.*/
 			
 			if(queryResult.isEmpty()) {
 				System.out.println("NO reults by the SQL Query, please check the SQL!!");

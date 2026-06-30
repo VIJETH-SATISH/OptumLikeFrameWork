@@ -1,10 +1,13 @@
 package PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.WebElement;
 
 import BaseTest.BasePage;
+import ExtentFactory.ExtentDriverFactory;
 import Utils.GenericUtil;
+import Utils.WaitUtil;
 
 public class HomePagePageObjects extends BasePage{
 
@@ -19,16 +22,16 @@ public class HomePagePageObjects extends BasePage{
 	}
 	
 	public void EnterTheCreds() throws Exception {
-		Thread.sleep(2500);
+		WaitUtil.waitForPageLoad(ExtentDriverFactory.getDriver());
 		GenericUtil.isElementDisplayed(emailGmailId_ele, 20);
 		emailGmailId_ele.sendKeys("vijeth2011");
-		Thread.sleep(2500);
+		WaitUtil.waitForPageLoad(ExtentDriverFactory.getDriver());
 	}
 	
 	public void EnterTheSearchContent() throws Exception {
-		Thread.sleep(2500);
-		searchGoogle_ele.sendKeys("Selenium");
-		Thread.sleep(2500);
+		WaitUtil.waitForPageLoad(ExtentDriverFactory.getDriver());
+		mediumWait.get().until(ExpectedConditions.visibilityOf(emailGmailId_ele)).sendKeys("Selenium");
+		Thread.sleep(2500);//look out it in the OPTUM Frame work 
 	}
 	
 }
